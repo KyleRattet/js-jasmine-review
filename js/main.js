@@ -78,7 +78,7 @@ function evenNumberAndCountDown (number) {
 test = 123;
 function randomNumberSum (number) {
   if (number > 10000 || number < 0) {
-    return "number has to be between 0 and 100";
+    return "number has to be between 0 and 10000";
   }
 
   var numArray = number.toString().split('');
@@ -91,10 +91,32 @@ function randomNumberSum (number) {
   return sumArray;
 }
 
+//PROBLEM 7
+function numberSumSingle (number) {
+  if (number > 10000 || number < 0) {
+    return "number has to be between 0 and 10000";
+  }
+
+  var numArray = number.toString().split('');
+  var sumArray = 0;
+
+
+  for (var i = 0; i < numArray.length; i++) {
+    if (sumArray < 10) {
+
+      sumArray += parseInt(numArray[i]);
+    }
+  }
+
+  return sumArray;
+
+}
+
 module.exports = {
   largestNumber: largestNumber,
   oddNumber: oddNumber,
   evenNumber: evenNumber,
   evenNumberAndCountDown: evenNumberAndCountDown,
-  randomNumberSum: randomNumberSum
+  randomNumberSum: randomNumberSum,
+  numberSumSingle: numberSumSingle
 }

@@ -40,9 +40,17 @@ describe('Problem 5', function() {
 //PROBLEM 6
 describe('Problem 6', function() {
   it('should take a random number from 0 to 10,000 and returns the sum of its digits', function() {
-    expect(code.randomNumberSum(10001)).toEqual("number has to be between 0 and 100");
+    expect(code.randomNumberSum(10001)).toEqual("number has to be between 0 and 10000");
     expect(code.randomNumberSum(123)).toEqual(6);
     expect(code.randomNumberSum(1049)).toEqual(14);
+  });
+});
+
+//PROBLEM 7
+describe('Problem 7', function() {
+  it('should take a random number from 0 to 10,000 and returns the sum of its digits so long as the sum is a single digit', function() {
+    expect(code.numberSumSingle(10001)).toEqual("number has to be between 0 and 10000");
+
   });
 });
 
