@@ -31,7 +31,25 @@ function oddNumber (number) {
   return odd;
 }
 
+//PROBLEM 3
+function evenNumber (number) {
+
+  if(number > 100 || number < 0) {
+    return "number has to be between 0 and 100";
+  }
+
+  var even = [];
+
+  for (var i = 0; i <= number; i++) {
+    if(i%2 === 0) {
+      even.push(i);
+    }
+  }
+  return even;
+}
+
 module.exports = {
   largestNumber: largestNumber,
-  oddNumber: oddNumber
+  oddNumber: oddNumber,
+  evenNumber: evenNumber
 }

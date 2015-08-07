@@ -17,3 +17,28 @@ describe('Problem 2', function() {
     expect(code.oddNumber(30)).toEqual(30);
   });
 });
+
+
+//PROBLEM 3
+describe('Problem 3', function() {
+  it('should take a random number from 0 to 100, returns even numbers from 0 to the random number', function() {
+    expect(code.evenNumber(6)).toEqual([0,2,4,6]);
+    expect(code.evenNumber(120)).toEqual("number has to be between 0 and 100");
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
