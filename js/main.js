@@ -73,9 +73,28 @@ function evenNumberAndCountDown (number) {
   }
 }
 
+//PROBLEM 6
+
+test = 123;
+function randomNumberSum (number) {
+  if (number > 10000 || number < 0) {
+    return "number has to be between 0 and 100";
+  }
+
+  var numArray = number.toString().split('');
+  var sumArray = 0;
+
+  for (var i = 0; i < numArray.length; i++) {
+    sumArray += parseInt(numArray[i]);
+  }
+
+  return sumArray;
+}
+
 module.exports = {
   largestNumber: largestNumber,
   oddNumber: oddNumber,
   evenNumber: evenNumber,
-  evenNumberAndCountDown: evenNumberAndCountDown
+  evenNumberAndCountDown: evenNumberAndCountDown,
+  randomNumberSum: randomNumberSum
 }

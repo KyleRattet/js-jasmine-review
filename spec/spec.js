@@ -33,10 +33,18 @@ describe('Problem 5', function() {
     expect(code.evenNumberAndCountDown(105)).toEqual("number has to be between 0 and 100");
     expect(code.evenNumberAndCountDown(46)).toEqual([40, 42, 44, 46]);
     expect(code.evenNumberAndCountDown(37)).toEqual([40, 39, 38, 37]);
-
   });
 });
 
+
+//PROBLEM 6
+describe('Problem 6', function() {
+  it('should take a random number from 0 to 10,000 and returns the sum of its digits', function() {
+    expect(code.randomNumberSum(10001)).toEqual("number has to be between 0 and 100");
+    expect(code.randomNumberSum(123)).toEqual(6);
+    expect(code.randomNumberSum(1049)).toEqual(14);
+  });
+});
 
 
 
