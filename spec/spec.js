@@ -27,7 +27,15 @@ describe('Problem 3', function() {
   });
 });
 
+//PROBLEM 5
+describe('Problem 5', function() {
+  it('should take a random number from 0 to 100, returns odd numbers from 40 to the random number, if random number is smaller than 40 return all of the numbers from 40 down to random number', function() {
+    expect(code.evenNumberAndCountDown(105)).toEqual("number has to be between 0 and 100");
+    expect(code.evenNumberAndCountDown(46)).toEqual([40, 42, 44, 46]);
+    expect(code.evenNumberAndCountDown(37)).toEqual([40, 39, 38, 37]);
 
+  });
+});
 
 
 

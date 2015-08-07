@@ -48,8 +48,34 @@ function evenNumber (number) {
   return even;
 }
 
+//PROBLEM 5
+function evenNumberAndCountDown (number) {
+
+  if(number > 100 || number < 0) {
+    return "number has to be between 0 and 100";
+  }
+
+  var even = [];
+  var countDown = [];
+
+  if (number > 40) {
+    for (var i = 40; i <= number; i++) {
+      if (i%2 === 0) {
+        even.push(i);
+      }
+    }
+    return even;
+  } else {
+    for (var i = 40; i >= number; i--) {
+      countDown.push(i);
+    }
+    return countDown;
+  }
+}
+
 module.exports = {
   largestNumber: largestNumber,
   oddNumber: oddNumber,
-  evenNumber: evenNumber
+  evenNumber: evenNumber,
+  evenNumberAndCountDown: evenNumberAndCountDown
 }
