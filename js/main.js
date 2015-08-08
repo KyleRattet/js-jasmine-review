@@ -100,15 +100,14 @@ function numberSumSingle (number) {
   var numArray = number.toString().split('');
   var sumArray = 0;
 
-
-  for (var i = 0; i < numArray.length; i++) {
-    if (sumArray < 10) {
-
-      sumArray += parseInt(numArray[i]);
+    for (var i = 0; i < numArray.length; i++) {
+        sumArray += parseInt(numArray[i]);
+        if (sumArray >= 10) {
+          console.log(sumArray);
+          sumArray -= parseInt(numArray[i]);
+        }
     }
-  }
-
-  return sumArray;
+  return(sumArray);
 
 }
 
