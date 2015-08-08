@@ -50,9 +50,19 @@ describe('Problem 6', function() {
 describe('Problem 7', function() {
   it('should take a random number from 0 to 10,000 and returns the sum of its digits so long as the sum is a single digit', function() {
     expect(code.numberSumSingle(10001)).toEqual("number has to be between 0 and 10000");
-
+    expect(code.numberSumSingle(129)).toEqual(3);
   });
 });
+
+//PROBLEM 8
+describe('Problem ', function() {
+  it('should take two random numbers from 0 to 100 as arguments and returns the smaller number that is greater than one, such that both numbers are divided by it with no remainder', function() {
+    expect(code.divisibleNum(105)).toEqual("number has to be between 0 and 100");
+    expect(code.divisibleNum(6,9)).toEqual(3);
+    expect(code.divisibleNum(20,4)).toEqual(2);
+  });
+});
+
 
 
 

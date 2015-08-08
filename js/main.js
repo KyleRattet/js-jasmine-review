@@ -103,12 +103,37 @@ function numberSumSingle (number) {
     for (var i = 0; i < numArray.length; i++) {
         sumArray += parseInt(numArray[i]);
         if (sumArray >= 10) {
-          console.log(sumArray);
           sumArray -= parseInt(numArray[i]);
         }
     }
   return(sumArray);
 
+}
+
+//PROBLEM 8
+function divisibleNum (num1, num2) {
+
+  if ((num1 || num2) > 100 || (num1 || num2) < 0) {
+    return "number has to be between 0 and 100";
+  }
+
+  var smaller;
+  var result = 0;
+
+  if (num1 < num2) {
+    smaller = num1;
+  } else {
+    smaller = num2;
+  }
+
+  for (var i = 2; i <= smaller; i++) {
+      if (num1 % i === 0 && num2 % i === 0) {
+        return i;
+      }
+      else if (num1 % i !== 0 && num2 % i !== 0) {
+        return "sorry";
+      }
+  }
 }
 
 module.exports = {
@@ -117,5 +142,6 @@ module.exports = {
   evenNumber: evenNumber,
   evenNumberAndCountDown: evenNumberAndCountDown,
   randomNumberSum: randomNumberSum,
-  numberSumSingle: numberSumSingle
+  numberSumSingle: numberSumSingle,
+  divisibleNum: divisibleNum
 }
