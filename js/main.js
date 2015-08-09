@@ -118,7 +118,6 @@ function divisibleNum (num1, num2) {
   }
 
   var smaller;
-  var result = 0;
 
   if (num1 < num2) {
     smaller = num1;
@@ -136,6 +135,51 @@ function divisibleNum (num1, num2) {
   }
 }
 
+//PROBLEM 9 -- in progress
+function leastCommonMultiple (num1, num2) {
+
+  function gcd (num1, num2) {
+
+  if ((num1 || num2) > 100 || (num1 || num2) < 0) {
+    return "number has to be between 0 and 100";
+  }
+
+  var smaller;
+
+  if (num1 < num2) {
+    smaller = num1;
+  } else {
+    smaller = num2;
+  }
+
+  for (var i = 2; i <= smaller; i++) {
+      if (num1 % i === 0 && num2 % i === 0) {
+        return i;
+      }
+      else if (num1 % i !== 0 && num2 % i !== 0) {
+        return "sorry";
+      }
+  }
+}
+  return num1*num2/gcd(num1,num2);
+
+}
+
+//PROBLEM 10
+function averageStdDev (num1, num2) {
+
+  var average = (num1 + num2)/2;
+  var diffNum1 = num1 - average;
+  var diffNum2= num2 - average;
+
+  var stdDev = Math.sqrt(((diffNum1*diffNum1) + (diffNum2*diffNum2))/2);
+
+  var results = "average " +average + ", standard deviation " + stdDev;
+
+  return results;
+}
+
+
 module.exports = {
   largestNumber: largestNumber,
   oddNumber: oddNumber,
@@ -143,5 +187,7 @@ module.exports = {
   evenNumberAndCountDown: evenNumberAndCountDown,
   randomNumberSum: randomNumberSum,
   numberSumSingle: numberSumSingle,
-  divisibleNum: divisibleNum
+  divisibleNum: divisibleNum,
+  leastCommonMultiple: leastCommonMultiple,
+  averageStdDev: averageStdDev
 }

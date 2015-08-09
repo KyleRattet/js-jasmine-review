@@ -55,13 +55,31 @@ describe('Problem 7', function() {
 });
 
 //PROBLEM 8
-describe('Problem ', function() {
+describe('Problem 8', function() {
   it('should take two random numbers from 0 to 100 as arguments and returns the smaller number that is greater than one, such that both numbers are divided by it with no remainder', function() {
     expect(code.divisibleNum(105)).toEqual("number has to be between 0 and 100");
     expect(code.divisibleNum(6,9)).toEqual(3);
     expect(code.divisibleNum(20,4)).toEqual(2);
+    expect(code.divisibleNum(5,3)).toEqual('sorry');
   });
 });
+
+//PROBLEM 9 -- in progress
+describe('Problem 9', function() {
+  it('should take two random numbers and return their least common multiple', function() {
+    expect(code.leastCommonMultiple(4,6)).toEqual(1);
+
+  });
+});
+
+//PROBLEM 10
+describe('Problem 10', function() {
+  it('should take two random numbers and return their average and standard deviation', function() {
+    expect(code.averageStdDev(4,6)).toEqual("average 5, standard deviation 1");
+    expect(code.averageStdDev(2,10)).toEqual("average 6, standard deviation 4");
+  });
+});
+
 
 
 
